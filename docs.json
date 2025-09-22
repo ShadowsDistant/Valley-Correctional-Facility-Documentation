@@ -4,7 +4,7 @@
   "name": "Valley Correctional Facility",
   "colors": {
     "primary": "#ffa200",
-    "light": "#07C983",
+    "light": "#ffa200",
     "dark": "#ffa200"
   },
   "favicon": "/favicon.svg",
