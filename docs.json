@@ -27,6 +27,12 @@
               "shift-rules-information/whitelist",
               "shift-rules-information/roleplay-information"
             ]
+          },
+          {
+            "group": "Discord Server Rules",
+            "pages": [
+              "discord-server-rules/chat-rules"
+            ]
           }
         ]
       }
