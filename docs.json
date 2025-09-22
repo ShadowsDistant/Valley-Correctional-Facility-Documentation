@@ -22,8 +22,8 @@
           {
             "group": "Shift Rules & Information",
             "pages": [
-              "shiftrulesandinformation/shiftinformation",
-              "shiftrulesandinformation/whitelist"
+              "shift-rules-information/shiftinformation",
+              "shift-rules-information/whitelist"
             ]
           }
         ]
