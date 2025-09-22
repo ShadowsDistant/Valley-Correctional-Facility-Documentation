@@ -22,8 +22,9 @@
           {
             "group": "Shift Rules & Information",
             "pages": [
-              "shift-rules-information/shiftinformation",
-              "shift-rules-information/whitelist"
+              "shift-rules-information/shift-information",
+              "shift-rules-information/whitelist",
+              "shift-rules-information/roleplay-information"
             ]
           }
         ]
