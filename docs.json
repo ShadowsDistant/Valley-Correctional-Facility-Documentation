@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "linden",
   "name": "Valley Correctional Facility",
   "colors": {
     "primary": "#ffa200",
