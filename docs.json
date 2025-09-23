@@ -31,7 +31,8 @@
           {
             "group": "Discord Server Rules",
             "pages": [
-              "discord-server-rules/chat-rules"
+              "discord-server-rules/chat-rules",
+              "discord-server-rules/voice-rules"
             ]
           }
         ]
