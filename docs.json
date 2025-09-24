@@ -44,6 +44,12 @@
               "discord-server-rules/chat-rules",
               "discord-server-rules/voice-rules"
             ]
+          },
+          {
+            "group": "Miscellaneous",
+            "pages": [
+              "miscellaneous/updates"
+            ]
           }
         ]
       }
