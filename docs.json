@@ -14,6 +14,10 @@
     "description": "We couldn't find what you where looking for. Trying check the URL to ensure it's correct. Otherwise, the page just might not exist."
   }
 },
+  "banner": {
+  "content": "Welcome to the new VCF documentation site! Here you can easily find information about the community and our rules.",
+  "dismissible": true 
+},
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
