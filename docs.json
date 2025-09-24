@@ -72,6 +72,16 @@
       ]
     }
   },
+  "contextual": {
+    "options": [
+{
+                "title": "Leave feedback",
+                "description": "Leave your feedback or report an issue so we can fix it!",
+                "icon": "plus",
+                "href": "https://forms.gle/pzkiU5ujJ1zMpm9d6"
+            }
+    ]
+  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
@@ -81,5 +91,6 @@
       "discord": "https://discord.gg/vprp"
     }
   }
+  
   
 }
