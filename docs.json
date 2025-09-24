@@ -74,6 +74,8 @@
   },
   "contextual": {
     "options": [
+      "copy",
+      "view",
 {
                 "title": "Leave feedback",
                 "description": "Leave your feedback or report an issue so we can fix it!",
