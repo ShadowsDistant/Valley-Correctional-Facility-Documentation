@@ -30,6 +30,13 @@
             ]
           },
           {
+            "group": "About Us",
+            "pages": [
+              "about-us/our-team",
+              "about-us/moderation-team"
+            ]
+          },
+          {
             "group": "Shift Rules & Information",
             "pages": [
               "shift-rules-information/shift-information",
