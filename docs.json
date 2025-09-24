@@ -10,7 +10,7 @@
   "errors": {
   "404": {
     "redirect": false,
-    "title": "404",
+    "title": "Something went wrong",
     "description": "We couldn't find what you where looking for. Trying check the URL to ensure it's correct. Otherwise, the page just might not exist."
   }
 },
