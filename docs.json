@@ -7,6 +7,13 @@
     "light": "#ffa200",
     "dark": "#363636"
   },
+  "errors": {
+  "404": {
+    "redirect": false,
+    "title": "404",
+    "description": "We couldn't find what you where looking for. Trying check the URL to ensure it's correct. Otherwise, the page just might not exist."
+  }
+},
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
@@ -59,4 +66,5 @@
       "discord": "https://discord.gg/vprp"
     }
   }
+  
 }
