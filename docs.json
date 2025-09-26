@@ -27,7 +27,8 @@
           {
             "group": "Overview",
             "pages": [
-              "introduction"
+              "introduction",
+              "notices"
             ]
           },
           {
