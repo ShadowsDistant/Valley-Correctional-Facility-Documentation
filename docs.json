@@ -39,19 +39,19 @@
             ]
           },
           {
-            "group": "Shift Rules & Information",
+            "group": "Community Rules",
             "pages": [
-              "shift-rules-information/shift-information",
-              "shift-rules-information/shift-rules",
-              "shift-rules-information/whitelist",
-              "shift-rules-information/roleplay-information"
+              "community-rules/chat-rules",
+              "community-rules/voice-rules",
+              "community-rules/shift-rules"
             ]
           },
           {
-            "group": "Discord Server Rules",
+            "group": "Shift Information",
             "pages": [
-              "discord-server-rules/chat-rules",
-              "discord-server-rules/voice-rules"
+              "shift-information/shift-information",
+              "shift-information/whitelist",
+              "shift-information/roleplay-information"
             ]
           },
           {
