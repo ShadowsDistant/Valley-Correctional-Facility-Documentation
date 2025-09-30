@@ -16,7 +16,7 @@
 },
   "banner": {
   "content": "🛡️ Moderation Applications: Apply to join our moderation team today! [Click here](https://melon.ly/form/7377847792229683200) to start your application.",
-  "dismissible": false 
+  "dismissible": true 
 },
   "favicon": "/favicon.svg",
   "navigation": {
