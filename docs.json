@@ -15,8 +15,8 @@
   }
 },
   "banner": {
-  "content": "🕒 Shift Announcement: Check the shift channel in our Discord to see the upcoming shift times for this weekend!",
-  "dismissible": true 
+  "content": "🛡️ Moderation Applications: Apply to join our moderation team today! [Click here](https://melon.ly/form/7377847792229683200) to start your application.",
+  "dismissible": false 
 },
   "favicon": "/favicon.svg",
   "navigation": {
