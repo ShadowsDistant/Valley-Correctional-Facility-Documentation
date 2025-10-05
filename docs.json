@@ -14,10 +14,6 @@
     "description": "We couldn't find what you where looking for. Trying check the URL to ensure it's correct. Otherwise, the page just might not exist."
   }
 },
-  "banner": {
-  "content": "🛡️ Moderation Applications: Apply to join our moderation team today! [Click here](https://melon.ly/form/7377847792229683200) to start your application.",
-  "dismissible": true 
-},
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
