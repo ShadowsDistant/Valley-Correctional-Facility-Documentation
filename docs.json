@@ -68,6 +68,11 @@
       ]
     }
   },
+  "integrations": {
+    "gtm": {
+        "tagId": "GTM-TH6NVBZQ"
+    }
+},
   "contextual": {
     "options": [
 {
