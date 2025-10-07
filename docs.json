@@ -46,7 +46,6 @@
             "group": "Shift Information",
             "pages": [
               "shift-information/shift-information",
-              "shift-information/whitelist",
               "shift-information/roleplay-information"
             ]
           },
