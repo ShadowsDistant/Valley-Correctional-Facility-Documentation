@@ -69,8 +69,8 @@
     }
   },
   "integrations": {
-    "gtm": {
-        "tagId": "GTM-TH6NVBZQ"
+    "ga4": {
+        "measurementId": "G-3CCK00BW4X"
     }
 },
   "contextual": {
