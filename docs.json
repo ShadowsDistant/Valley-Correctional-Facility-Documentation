@@ -2,6 +2,9 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "linden",
   "name": "Valley Correctional Facility",
+  "thumbnails": {
+    "appearance": "dark"
+  },
   "colors": {
     "primary": "#a8a8a8",
     "light": "#ffa200",
