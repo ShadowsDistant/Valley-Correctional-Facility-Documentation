@@ -11,12 +11,12 @@
     "dark": "#ffa200"
   },
   "errors": {
-  "404": {
-    "redirect": false,
-    "title": "Something went wrong",
-    "description": "We couldn't find what you where looking for. Trying check the URL to ensure it's correct. Otherwise, the page just might not exist."
-  }
-},
+    "404": {
+      "redirect": false,
+      "title": "Something went wrong",
+      "description": "We couldn't find what you where looking for. Trying check the URL to ensure it's correct. Otherwise, the page just might not exist."
+    }
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
@@ -26,7 +26,8 @@
           {
             "group": "Overview",
             "pages": [
-              "introduction",
+              "home",
+              "information",
               "notices"
             ]
           },
@@ -40,9 +41,7 @@
           {
             "group": "Community Rules",
             "pages": [
-              "community-rules/chat-rules",
-              "community-rules/voice-rules",
-              "community-rules/shift-rules"
+              "community-rules/our-rules"
             ]
           },
           {
@@ -71,22 +70,14 @@
       ]
     }
   },
-  "integrations": {
-    "ga4": {
-        "measurementId": "G-3CCK00BW4X"
-    },
-    "telemetry": {
-      "enabled": true
-    }
-},
   "contextual": {
     "options": [
-{
-                "title": "Leave feedback",
-                "description": "Leave your feedback or report an issue so we can fix it!",
-                "icon": "thought-bubble",
-                "href": "https://forms.gle/pzkiU5ujJ1zMpm9d6"
-            }
+      {
+        "title": "Leave feedback",
+        "description": "Leave your feedback or report an issue so we can fix it!",
+        "icon": "thought-bubble",
+        "href": "https://forms.gle/pzkiU5ujJ1zMpm9d6"
+      }
     ]
   },
   "logo": {
@@ -98,6 +89,4 @@
       "discord": "https://discord.gg/vprp"
     }
   }
-  
-  
 }
