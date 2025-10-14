@@ -18,13 +18,6 @@
     }
   },
   "favicon": "/favicon.svg",
-  "redirects": [
-    {
-      "source": "/statusv2",
-      "destination": "/status",
-      "permanent": false
-    }
-  ],
   "navigation": {
     "tabs": [
       {
