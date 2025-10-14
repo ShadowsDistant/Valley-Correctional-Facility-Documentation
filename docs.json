@@ -20,7 +20,7 @@
   "favicon": "/favicon.svg",
   "redirects": [
     {
-      "source": "/*",
+      "source": "/statusv2",
       "destination": "/status",
       "permanent": false
     }
