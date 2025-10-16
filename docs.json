@@ -47,9 +47,9 @@
           {
             "group": "Shift Information",
             "pages": [
-              "shift-information/shift-information",
-              "shift-information/roleplay-information",
-              "shift-information/shift-schedule"
+              "shifts/shift-information",
+              "shifts/roleplay-information",
+              "shifts/shift-schedule"
             ]
           },
           {
