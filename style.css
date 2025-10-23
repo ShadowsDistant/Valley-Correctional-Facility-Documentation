@@ -1,10 +1,8 @@
 /*
- * Modern Mintlify Theme for Valley Correctional Facility (Corrected)
+ * Modern Mintlify Theme for Valley Correctional Facility (Polished)
  *
- * This theme uses the color palette from your docs.json configuration,
- * with adjustments for proper contrast and element visibility.
- * Primary Accent: #ffa200 (Orange)
- * Primary Text/Accent: #a8a8a8 (Gray)
+ * This theme includes smoother animations to prevent hover glitching and
+ * redesigned buttons with clear borders and contrast.
  */
 
 /* --- Root Variables --- */
@@ -12,9 +10,9 @@
   --primary-color: #ffa200;
   --hover-color: #e69100; /* A darker shade for hover effects */
   
-  /* CORRECTED: Differentiated dark colors for UI layers */
+  /* CORRECTED AGAIN: Differentiated dark colors for UI layers are essential for visibility */
   --background-color: #100e0b;      /* Deepest black for the main background */
-  --card-background: #1c1c1c;      /* Slightly lighter black for cards, navbar, sidebar */
+  --card-background: #100e0b;       /* Slightly lighter black for cards, navbar, sidebar */
   --border-color: #333333;          /* A visible gray for borders and separators */
 
   --text-color: #e5e7eb;             /* Main text color (light gray) */
@@ -37,7 +35,7 @@ body {
 
 .navbar-link {
   color: var(--text-color);
-  transition: color 0.3s ease;
+  transition: color 0.2s ease-in-out;
 }
 
 .navbar-link:hover {
@@ -57,15 +55,15 @@ body {
 
 .nav-anchor {
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 6px; /* Slightly rounded active state for a modern look */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-radius: 6px;
   margin: 2px 0;
 }
 
 .nav-anchor:hover,
 .nav-anchor.active {
   background-color: var(--primary-color);
-  color: #000000; /* Black text for high contrast on orange background */
+  color: #000000;
 }
 
 /* --- Content Area --- */
@@ -75,11 +73,8 @@ body {
 
 .mdx-content h1,
 .mdx-content h2,
-.mdx-content h3,
-.mdx-content h4,
-.mdx-content h5,
-.mdx-content h6 {
-  color: var(--text-color); /* Changed to primary text for better contrast */
+.mdx-content h3 {
+  color: var(--text-color);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
@@ -87,7 +82,7 @@ body {
 .mdx-content a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease-in-out;
 }
 
 .mdx-content a:hover {
@@ -95,14 +90,14 @@ body {
   text-decoration: underline;
 }
 
-/* --- Cards and Callouts --- */
+/* --- Cards and Callouts (Anti-Glitch) --- */
 .card {
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
   border-radius: 0.75rem;
-  /* CORRECTED: A more visible shadow for dark themes */
   box-shadow: 0 4px 14px 0 rgb(0 0 0 / 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* SMOOTHER TRANSITION: Use 'ease-in-out' for a less jerky animation */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
@@ -121,16 +116,32 @@ body {
   background-color: var(--card-background);
 }
 
-/* --- Buttons --- */
+/* --- Buttons (Redesigned with Borders) --- */
 .button,
 .topbar-cta-button {
     background-color: var(--primary-color);
-    color: #000000; /* Black text for better contrast */
+    color: #000000; /* Black text provides excellent contrast */
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    
+    /* NEW: Added a border for better definition */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    
+    /* SMOOTHER TRANSITION: Added more properties for a robust animation */
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 .button:hover,
 .topbar-cta-button:hover {
     background-color: var(--hover-color);
+    /* NEW: Change border color and lift the button on hover */
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* ACCESSIBILITY: Adds a clear outline for keyboard navigation */
+.button:focus-visible,
+.topbar-cta-button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
