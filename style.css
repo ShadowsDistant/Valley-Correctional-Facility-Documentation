@@ -1,17 +1,20 @@
 /*
- * Modern Mintlify Theme
+ * Modern Mintlify Theme for Valley Correctional Facility
  *
- * A dark, clean, and modern theme for Mintlify documentation sites.
+ * This theme uses the color palette from your docs.json configuration.
+ * Primary Accent: #ffa200 (Orange)
+ * Primary Text/Accent: #a8a8a8 (Gray)
  */
 
 /* --- Root Variables --- */
 :root {
-  --primary-color: #4f46e5;
+  --primary-color: #ffa200;
+  --hover-color: #e69100; /* A darker shade of the primary color for hover effects */
   --background-color: #111827;
-  --text-color: #e5e7eb;
   --card-background: #1f2937;
+  --text-color: #e5e7eb;
+  --secondary-text-color: #a8a8a8;
   --border-color: #374151;
-  --hover-color: #3730a3;
   --font-family: 'Inter', sans-serif;
 }
 
@@ -44,7 +47,7 @@ body {
 }
 
 .sidebar-group-header {
-  color: var(--text-color);
+  color: var(--secondary-text-color);
   font-weight: 600;
 }
 
@@ -56,7 +59,7 @@ body {
 .nav-anchor:hover,
 .nav-anchor.active {
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: #000000; /* Black text for better contrast on orange background */
 }
 
 /* --- Content Area --- */
@@ -70,7 +73,7 @@ body {
 .mdx-content h4,
 .mdx-content h5,
 .mdx-content h6 {
-  color: var(--text-color);
+  color: var(--secondary-text-color);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
@@ -113,7 +116,7 @@ body {
 .button,
 .topbar-cta-button {
     background-color: var(--primary-color);
-    color: #ffffff;
+    color: #000000; /* Black text for better contrast */
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
 }
