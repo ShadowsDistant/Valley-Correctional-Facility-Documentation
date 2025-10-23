@@ -1,0 +1,124 @@
+/*
+ * Modern Mintlify Theme
+ *
+ * A dark, clean, and modern theme for Mintlify documentation sites.
+ */
+
+/* --- Root Variables --- */
+:root {
+  --primary-color: #4f46e5;
+  --background-color: #111827;
+  --text-color: #e5e7eb;
+  --card-background: #1f2937;
+  --border-color: #374151;
+  --hover-color: #3730a3;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* --- General Body and Font Styles --- */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+/* --- Navbar --- */
+#navbar {
+  background-color: var(--card-background);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-link {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: var(--primary-color);
+}
+
+/* --- Sidebar --- */
+#sidebar {
+  background-color: var(--card-background);
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebar-group-header {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.nav-anchor {
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-anchor:hover,
+.nav-anchor.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* --- Content Area --- */
+#content-area {
+  background-color: var(--background-color);
+}
+
+.mdx-content h1,
+.mdx-content h2,
+.mdx-content h3,
+.mdx-content h4,
+.mdx-content h5,
+.mdx-content h6 {
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.mdx-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mdx-content a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+/* --- Cards and Callouts --- */
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.callout {
+  border-radius: 0.5rem;
+}
+
+/* --- Code Blocks --- */
+.code-block {
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+/* --- Buttons --- */
+.button,
+.topbar-cta-button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.topbar-cta-button:hover {
+    background-color: var(--hover-color);
+}
