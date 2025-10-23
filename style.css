@@ -1,7 +1,8 @@
 /*
- * Modern Mintlify Theme for Valley Correctional Facility
+ * Modern Mintlify Theme for Valley Correctional Facility (Corrected)
  *
- * This theme uses the color palette from your docs.json configuration.
+ * This theme uses the color palette from your docs.json configuration,
+ * with adjustments for proper contrast and element visibility.
  * Primary Accent: #ffa200 (Orange)
  * Primary Text/Accent: #a8a8a8 (Gray)
  */
@@ -9,12 +10,15 @@
 /* --- Root Variables --- */
 :root {
   --primary-color: #ffa200;
-  --hover-color: #e69100; /* A darker shade of the primary color for hover effects */
-  --background-color: #100e0b;
-  --card-background: #100e0b;
-  --text-color: #e5e7eb;
-  --secondary-text-color: #a8a8a8;
-  --border-color: #100e0b;
+  --hover-color: #e69100; /* A darker shade for hover effects */
+  
+  /* CORRECTED: Differentiated dark colors for UI layers */
+  --background-color: #100e0b;      /* Deepest black for the main background */
+  --card-background: #1c1c1c;      /* Slightly lighter black for cards, navbar, sidebar */
+  --border-color: #333333;          /* A visible gray for borders and separators */
+
+  --text-color: #e5e7eb;             /* Main text color (light gray) */
+  --secondary-text-color: #a8a8a8;   /* Secondary text color (medium gray) */
   --font-family: 'Inter', sans-serif;
 }
 
@@ -54,12 +58,14 @@ body {
 .nav-anchor {
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 6px; /* Slightly rounded active state for a modern look */
+  margin: 2px 0;
 }
 
 .nav-anchor:hover,
 .nav-anchor.active {
   background-color: var(--primary-color);
-  color: #000000; /* Black text for better contrast on orange background */
+  color: #000000; /* Black text for high contrast on orange background */
 }
 
 /* --- Content Area --- */
@@ -73,7 +79,7 @@ body {
 .mdx-content h4,
 .mdx-content h5,
 .mdx-content h6 {
-  color: var(--secondary-text-color);
+  color: var(--text-color); /* Changed to primary text for better contrast */
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
@@ -94,12 +100,14 @@ body {
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
   border-radius: 0.75rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease;
+  /* CORRECTED: A more visible shadow for dark themes */
+  box-shadow: 0 4px 14px 0 rgb(0 0 0 / 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 20px 0 rgb(0 0 0 / 0.3);
 }
 
 .callout {
@@ -110,6 +118,7 @@ body {
 .code-block {
   border-radius: 0.75rem;
   border: 1px solid var(--border-color);
+  background-color: var(--card-background);
 }
 
 /* --- Buttons --- */
