@@ -85,6 +85,31 @@
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
+  "seo": {
+    "metatags": {
+      "charset": "UTF-8",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "description": "Welcome to the official documentation for the Valley Correctional Facility (VCF) community. This site provides helpful information about our community, including rules and guidelines. As a member of our community, you are expected to follow all community rules and regulations.",
+      "keywords": "Valley Correctional Facility, VCF, Prison Roleplay, VPRP, Fremont State, Valley County Sheriff's Office, Fremont State Police, VCF Discord, Valley Correctional Facility Discord, Valley Correctional, Valley Correctional Discord, Valley Prison, VP, Prison Roleplay, Roblox Prison Roleplay",
+      "author": "shadowsdistant",
+      "robots": "index, follow",
+      "googlebot": "index, follow",
+      "google": "notranslate",
+      "generator": "Mintlify",
+      "theme-color": "#ffa200",
+      "color-scheme": "dark",
+      "format-detection": "telephone=no",
+      "referrer": "origin",
+      "refresh": "30",
+      "rating": "general",
+      "revisit-after": "2 days",
+      "language": "en",
+      "distribution": "global",
+      "coverage": "Worldwide",
+      "category": "Documentation",
+      "target": "all"
+  }
+},
   "footer": {
     "socials": {
       "discord": "https://discord.gg/GDVqmx9hdk"
