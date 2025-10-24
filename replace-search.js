@@ -1,68 +1,89 @@
-// _scripts/replace-search.js
+// content/custom-search.js
 
-function initializeCustomSearch() {
-  // --- 1. Define the resources for your custom search ---
-  const cssUrls = [
-    'https://ai-docs-vcf-nlweb.code-99-studios.workers.dev/nlweb-dropdown-chat.css',
-    'https://ai-docs-vcf-nlweb.code-99-studios.workers.dev/common-chat-styles.css'
-  ];
-  const moduleUrl = 'https://ai-docs-vcf-nlweb.code-99-studios.workers.dev/nlweb-dropdown-chat.js';
+// Use a self-invoking function to avoid polluting the global scope
+(function() {
+  // We only want this script to run in the browser, not during server-side builds.
+  if (typeof window === 'undefined') {
+    return;
+  }
 
-  // --- 2. Dynamically add the required CSS to the document's head ---
-  cssUrls.forEach(url => {
-    // Avoid adding duplicate stylesheets on client-side navigation
-    if (!document.querySelector(`link[href="${url}"]`)) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = url;
-      document.head.appendChild(link);
+  // This function will set everything up.
+  function initializeCustomSearch() {
+    // --- 1. Define resources ---
+    const cssUrls = [
+      'https://ai-docs-vcf-nlweb.code-99-studios.workers.dev/nlweb-dropdown-chat.css',
+      'https://ai-docs-vcf-nlweb.code-99-studios.workers.dev/common-chat-styles.css'
+    ];
+    const moduleUrl = 'https://ai-docs-vcf-nlweb.code-99-studios.workers.dev/nlweb-dropdown-chat.js';
+    
+    // This will hold the instance of our chat component once it's loaded.
+    let chatInstance = null;
+
+    // --- 2. Load CSS files ---
+    cssUrls.forEach(url => {
+      if (!document.querySelector(`link[href="${url}"]`)) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = url;
+        document.head.appendChild(link);
+      }
+    });
+
+    // --- 3. Replace the original search bar ---
+    const originalSearchForm = document.querySelector('header form[role="search"]');
+    if (!originalSearchForm || !originalSearchForm.parentElement) {
+      console.warn("Mintlify's default search bar was not found.");
+      return;
     }
-  });
 
-  // --- 3. Find and replace the default search bar ---
-  // The selector targets the form Mintlify uses for its search bar in the header.
-  const originalSearchForm = document.querySelector('header form[role="search"]');
-
-  if (originalSearchForm && originalSearchForm.parentElement) {
-    // Hide the original search bar
+    // Hide the original search form
     originalSearchForm.style.display = 'none';
     const parentContainer = originalSearchForm.parentElement;
 
-    // --- 4. Create and inject your custom search container ---
-    // Check if our container already exists to avoid duplicates on re-renders
+    // Create the placeholder for our custom search, but only if it's not already there.
     if (!document.getElementById('docs-search-container')) {
       const newSearchContainer = document.createElement('div');
       newSearchContainer.id = 'docs-search-container';
-      // Place the new container right before the old (now hidden) search form
       parentContainer.insertBefore(newSearchContainer, originalSearchForm);
 
-      // --- 5. Load and initialize the JavaScript module for the search component ---
-      const script = document.createElement('script');
-      script.type = 'module';
-      script.textContent = `
-        try {
-          import { NLWebDropdownChat } from '${moduleUrl}';
-
-          // Initialize the custom search on the container we just created
-          new NLWebDropdownChat({
+      // --- 4. Dynamically import and initialize the module ---
+      // We do this once and store the instance.
+      import(moduleUrl)
+        .then(({ NLWebDropdownChat }) => {
+          chatInstance = new NLWebDropdownChat({
             containerId: 'docs-search-container',
             site: 'https://ai-docs-vcf-nlweb.code-99-studios.workers.dev',
             placeholder: 'Search for docs...',
             endpoint: 'https://ai-docs-vcf-nlweb.code-99-studios.workers.dev'
           });
-        } catch (error) {
-          console.error('Failed to initialize custom search component:', error);
-        }
-      `;
-      document.body.appendChild(script);
+        })
+        .catch(error => {
+          console.error('Failed to load or initialize custom search component:', error);
+        });
     }
-  } else {
-    console.warn('Mintlify default search bar not found. Custom search cannot be loaded.');
-  }
-}
 
-// --- Run the script after the initial page load ---
-// We add a small delay to ensure all of Mintlify's elements are rendered.
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(initializeCustomSearch, 500);
-});
+    // --- 5. Listen for the '/' keypress to trigger the search ---
+    document.addEventListener('keydown', (event) => {
+      // We check if the user is typing in an input field already.
+      const isTyping = event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA';
+
+      if (event.key === '/' && !isTyping) {
+        // Prevent the default action (typing '/' in the browser).
+        event.preventDefault();
+
+        // If the chat component has been initialized, find its input and focus it.
+        if (chatInstance) {
+          const searchInput = document.querySelector('#docs-search-container input');
+          if (searchInput) {
+            searchInput.focus(); // Focusing the input will likely trigger the dropdown to open.
+          }
+        }
+      }
+    });
+  }
+
+  // Run our setup function after the page has fully loaded.
+  // This ensures all of Mintlify's elements are on the page.
+  document.addEventListener('DOMContentLoaded', initializeCustomSearch);
+
+})();
